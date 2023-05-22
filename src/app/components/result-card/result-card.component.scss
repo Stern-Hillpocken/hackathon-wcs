@@ -1,0 +1,35 @@
+.card{
+    cursor: pointer;
+    border: 2px solid var(--color-dark);
+    border-radius: 1em;
+    box-shadow: 4px 4px 2px gray;
+    margin: auto;
+    margin-bottom: 1em;
+    overflow: hidden;
+    max-width: 650px;
+    position: relative;
+    &:hover{
+        border: 2px solid var(--color-base);
+        left: 4px;
+        top: 4px;
+        box-shadow: none;
+        svg{
+            fill: var(--color-base);
+        }
+        p{
+            color: var(--color-base);
+        }
+    }
+}
+img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+svg{
+    fill: var(--color-dark);
+    width: 24px;
+}
+p{
+    text-align: center;
+}

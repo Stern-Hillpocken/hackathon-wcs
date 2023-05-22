@@ -1,0 +1,71 @@
+div{
+    margin: auto;
+    max-width: 600px;
+}
+
+.outter-submit{
+    background: var(--linear-gradient);
+    border: none;
+    border-radius: 2em;
+    padding: 0.5em;
+    box-shadow: 2px 2px 1px gray;
+    margin: 1em 0;
+    display: inline-block;
+}
+a{
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 1em;
+    padding: 0.25em;
+    font-size: 1.25em;
+    &:hover{
+        background-color: inherit;
+        color: white;
+    }
+}
+
+fieldset{
+    margin-bottom: 1em;
+}
+
+svg{
+    width: 1.5em;
+    vertical-align: bottom;
+}
+
+.add-favorite{
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 1em;
+    padding: 0.25em;
+    font-size: 1.25em;
+    &:hover{
+        background-color: inherit;
+        color: white;
+        svg{
+            fill: white;
+        }
+    }
+}
+
+.popup{
+    position: absolute;
+    right: 0;
+    bottom: 1em;
+}
+.favorite-is-added, .favorite-is-removed{
+    border: 2px solid black;
+    border-radius: 2em 0 0 2em;
+    font-size: 2em;
+    padding: 0 1em;
+}
+.favorite-is-added{
+    border-color: var(--color-dark);
+    color: var(--color-dark);
+}
+.favorite-is-removed{
+    border-color: red;
+    color: red;
+}

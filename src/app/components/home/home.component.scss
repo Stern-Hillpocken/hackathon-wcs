@@ -1,0 +1,34 @@
+.search-info {
+    text-align: center;
+}
+
+h1 {
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 10em;
+}
+
+.favorite{
+    cursor: pointer;
+    background: var(--linear-gradient);
+    border-radius: 5em;
+    box-shadow: 4px 4px 2px gray;
+    position: fixed;
+    left: 1em;
+    bottom: 1em;
+    padding: 0.5em 0.5em 2em 0.5em;
+    svg{
+        background-color: white;
+        border-radius: 5em;
+        padding: 0.5em;
+        width: 5em; 
+    }
+    &:hover{
+        svg{
+            background-color: inherit;
+            fill: white;
+        }
+    }
+}

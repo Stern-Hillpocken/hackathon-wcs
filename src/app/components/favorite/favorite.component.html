@@ -1,0 +1,8 @@
+<app-back-to-home></app-back-to-home>
+<div class="favorites">
+    <h3>Liste des favoris</h3>
+
+    <ul>
+        <li *ngFor="let favorite of favoriteList"><span class="outter-submit"><a [routerLink]="['/localization',favorite.id]">{{ favorite.name }}</a></span> ~ <svg (click)="onClickTrash(favorite.id)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo poubelle</title><path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" /></svg></li>
+    </ul>
+</div>

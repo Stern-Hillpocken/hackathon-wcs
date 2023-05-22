@@ -1,0 +1,38 @@
+.favorites{
+    margin: auto;
+    max-width: 600px;
+}
+svg{
+    cursor: pointer;
+    width: 1.5em;
+    vertical-align: baseline;
+    &:hover{
+        fill: red;
+    }
+}
+
+li{
+    list-style: none;
+}
+
+.outter-submit{
+    background: var(--linear-gradient);
+    border: none;
+    border-radius: 2em;
+    padding: 0.5em;
+    box-shadow: 2px 2px 1px gray;
+    margin: 1em 0;
+    display: inline-block;
+}
+a{
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 1em;
+    padding: 0.25em;
+    font-size: 1.25em;
+    &:hover{
+        background-color: inherit;
+        color: white;
+    }
+}

@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0 1em 0;
+}
+svg{
+    width: 64px;
+}
+form{
+    display: flex;
+    width: 90vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+input[type=number]{
+    border-radius: 1em;
+    //margin: 0.5em 1em;
+    width: 12em;
+}
+.outter-submit{
+    background: var(--linear-gradient);
+    border: none;
+    border-radius: 1em;
+    padding: 0.25em;
+    box-shadow: 2px 2px 1px gray;;
+}
+input[type=submit]{
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+    &:hover{
+        background-color: inherit;
+        color: white;
+    }
+}
+button{
+    padding: 0.5em;
+}
+button svg{
+    width: 24px;
+    vertical-align: sub;
+}

@@ -1,0 +1,31 @@
+<app-back-to-home></app-back-to-home>
+<div>
+    <h3>{{ localization.name }}</h3>
+    <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo horaire</title><path d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" /></svg> {{ localization.openingHours }}</p>
+    <p class="outter-submit"><a [href]="localization.website">{{ localization.website }}</a></p>
+    <fieldset>
+        <legend>Adresse</legend>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo adresse</title><path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" /></svg> {{ localization.adress }}<br>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo GPS</title><path d="M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M3.05,13H1V11H3.05C3.5,6.83 6.83,3.5 11,3.05V1H13V3.05C17.17,3.5 20.5,6.83 20.95,11H23V13H20.95C20.5,17.17 17.17,20.5 13,20.95V23H11V20.95C6.83,20.5 3.5,17.17 3.05,13M12,5A7,7 0 0,0 5,12A7,7 0 0,0 12,19A7,7 0 0,0 19,12A7,7 0 0,0 12,5Z" /></svg> {{ localization.gps.latitude }}&nbsp;; {{ localization.gps.longitude }}
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Contact</legend>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo téléphone</title><path d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" /></svg> {{ localization.phone }}<br>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo email</title><path d="M22 5.5H9C7.9 5.5 7 6.4 7 7.5V16.5C7 17.61 7.9 18.5 9 18.5H22C23.11 18.5 24 17.61 24 16.5V7.5C24 6.4 23.11 5.5 22 5.5M22 16.5H9V9.17L15.5 12.5L22 9.17V16.5M15.5 10.81L9 7.5H22L15.5 10.81M5 16.5C5 16.67 5.03 16.83 5.05 17H1C.448 17 0 16.55 0 16S.448 15 1 15H5V16.5M3 7H5.05C5.03 7.17 5 7.33 5 7.5V9H3C2.45 9 2 8.55 2 8S2.45 7 3 7M1 12C1 11.45 1.45 11 2 11H5V13H2C1.45 13 1 12.55 1 12Z" /></svg> {{ localization.email }}
+        </p>
+    </fieldset>
+    <fieldset *ngIf="localization.wheelchair">
+        <legend>En plus</legend>
+        <p *ngIf="localization.wheelchair">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo fauteuil roulant</title><path d="M14 16L15.32 17.76C14.32 19.68 12.31 21 10 21C6.69 21 4 18.31 4 15C4 12.57 5.46 10.5 7.55 9.55L7.76 11.72C6.71 12.44 6 13.63 6 15C6 17.21 7.79 19 10 19C11.86 19 13.41 17.72 13.86 16H14M19.55 16.11L18.3 16.73L15.5 13H10.91L10.71 11H14V9H10.5L10.2 6C11.21 5.88 12 5.04 12 4C12 2.9 11.11 2 10 2S8 2.9 8 4C8 4.03 8 4.07 8 4.1H8L9.1 15H14.5L17.7 19.27L20.45 17.9L19.55 16.11Z" /></svg>Accès facilité pour les fauteuils roualnts.
+        </p>
+    </fieldset>
+    <div class="outter-submit" (click)="onClickToggleFavorite()"><p class="add-favorite"><svg *ngIf="!isFavorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo mettre en favoris</title><path d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" /></svg><svg *ngIf="isFavorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Logo enlever des favoris</title><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" /></svg> Mettre en favoris !</p></div>
+</div>
+<div *ngIf="popupDisplay" class="popup">
+    <p *ngIf="isFavorite" class="favorite-is-added">Ajouté en favoris&nbsp;!</p>
+    <p *ngIf="!isFavorite" class="favorite-is-removed">Retiré de favoris&nbsp;!</p>
+</div>
